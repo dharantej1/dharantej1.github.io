@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Find Your Friend!</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" id="logo" onclick="location.reload();"><img src="kmit-bar.png" alt="Logo" class="img-fluid"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li>
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Body -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <form>
+                    <div class="form-group">
+                        <label for="rollNumber">Enter the Roll Number</label>
+                        <input type="text" required class="form-control" id="rollNumber" placeholder="Enter the Roll Number">
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="displayResult()">Find Who is it!</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-5" id="result">
+            <!-- Result will be displayed here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6" id="AboutUs">
+                    <h5>About the Website</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non magna auctor, volutpat est at,
+                        imperdiet magna. Maec
+                        Maecenas tincidunt mi a urna placerat, auctor egestas risus consectetur. Praesent id nisi eu
+                        diam mollis condimentum. Proin nec sollicitudin ligula. Suspendisse potenti. Vestibulum id quam
+                        metus. In hac habitasse platea dictumst.</p>
+                </div>
+                <div class="col-6" id="ContactUs">
+                    <h5>Social Profiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="">GitHub</a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <p>Copyright © 2022 Find Your Friend!</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // function displayResult() {
+        //     // Get the input value
+        //     var rollNumber = document.getElementById("searchInput").value;
+
+        //     // Create the image element
+        //     var image = document.createElement("img");
+        //     image.src = "http://teleuniv.in/sanjaya/student-images/19BD1A057F.jpg";
+        //     image.alt = rollNumber;
+
+        //     // Create the text element
+        //     var text = document.createElement("p");
+        //     text.innerHTML = rollNumber;
+
+        //     // Display the result
+        //     var resultDiv = document.getElementById("result");
+        //     resultDiv.innerHTML = "";
+        //     resultDiv.appendChild(image);
+        //     resultDiv.appendChild(text);
+        // }
+    
+        function displayResult() {
+            // Get the input value
+            var rollNumber = document.getElementById("rollNumber").value.toUpperCase();
+            // console.log(rollNumber)
+            
+            // Create the image element
+            var image = document.createElement("img");
+            image.src = "http://teleuniv.in/sanjaya/student-images/" + rollNumber + ".jpg";
+            image.alt = "Invalid Roll Number "+rollNumber;
+
+            // Create the text element
+            var text = document.createElement("p");
+            text.innerHTML = rollNumber;
+
+            // Display the result
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "";
+            resultDiv.appendChild(image);
+            resultDiv.appendChild(text);
+        }
+
+
+
+    </script>
+</body>
+
+</html>
