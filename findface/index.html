@@ -12,7 +12,8 @@
 <body>
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#" id="logo" onclick="location.reload();"><img src="kmit-bar.png" alt="Logo" class="img-fluid"></a>
+        <a class="navbar-brand" href="#" id="logo" onclick="location.reload();"><img src="kmit-bar.png" alt="Logo"
+                class="img-fluid"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -20,10 +21,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li>
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="#AboutUs">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="#ContactUs">Contact Us</a>
                 </li>
             </ul>
         </div>
@@ -36,7 +37,8 @@
                 <form>
                     <div class="form-group">
                         <label for="rollNumber">Enter the Roll Number</label>
-                        <input type="text" required class="form-control" id="rollNumber" placeholder="Enter the Roll Number">
+                        <input type="text" required class="form-control" id="rollNumber"
+                            placeholder="Enter the Roll Number">
                     </div>
                     <button type="submit" class="btn btn-primary" onclick="displayResult()">Find Who is it!</button>
                 </form>
@@ -54,17 +56,16 @@
                 <div class="col-6" id="AboutUs">
                     <h5>About the Website</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non magna auctor, volutpat est at,
-                        imperdiet magna. Maec
-                        Maecenas tincidunt mi a urna placerat, auctor egestas risus consectetur. Praesent id nisi eu
+                        imperdiet magna. Maec Maecenas tincidunt mi a urna placerat, auctor egestas risus consectetur. Praesent id nisi eu
                         diam mollis condimentum. Proin nec sollicitudin ligula. Suspendisse potenti. Vestibulum id quam
                         metus. In hac habitasse platea dictumst.</p>
                 </div>
                 <div class="col-6" id="ContactUs">
                     <h5>Social Profiles</h5>
                     <ul class="list-unstyled">
-                        <li><a href="">GitHub</a></li>
-                        <li><a href="">Twitter</a></li>
-                        <li><a href="">Instagram</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
                     </ul>
                 </div>
             </div>
@@ -100,16 +101,16 @@
         //     resultDiv.appendChild(image);
         //     resultDiv.appendChild(text);
         // }
-    
+
         function displayResult() {
             // Get the input value
             var rollNumber = document.getElementById("rollNumber").value.toUpperCase();
-            // console.log(rollNumber)
-            
+            console.log(rollNumber)
+
             // Create the image element
             var image = document.createElement("img");
             image.src = "http://teleuniv.in/sanjaya/student-images/" + rollNumber + ".jpg";
-            image.alt = "Invalid Roll Number "+rollNumber;
+            image.alt = "Invalid Roll Number " + rollNumber;
 
             // Create the text element
             var text = document.createElement("p");
