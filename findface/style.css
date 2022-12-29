@@ -1,14 +1,11 @@
 /* Add your CSS styles here */
-
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   font-family: sans-serif;
 }
-
 .header {
   display: flex;
   align-items: center;
@@ -16,39 +13,32 @@ body {
   color: #fff;
   padding: 20px;
 }
-
 .header img {
   height: 50px;
   margin-right: 20px;
 }
-
 .header h1 {
   font-size: 24px;
   margin: 0;
 }
-
 .body {
   display: flex;
 }
-
 .body .left-column {
   width: 25%;
   background-color: #eee;
   padding: 20px;
 }
-
 .body .right-column {
   width: 75%;
   background-color: #fff;
   padding: 20px;
+  display: none; /* Add this line */
 }
-
 .body .right-column img {
-
   max-width: 100%;
   height: auto;
 }
-
 .footer {
   display: flex;
   align-items: center;
@@ -56,27 +46,22 @@ body {
   color: #fff;
   padding: 20px;
 }
-
 .footer .section {
   flex: 1;
   text-align: center;
 }
-
 .footer .section h2 {
   font-size: 18px;
   margin: 0;
 }
-
 .footer .section ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 .footer .section li {
   margin: 10px 0;
 }
-
 .footer .section a {
   color: #fff;
   text-decoration: none;

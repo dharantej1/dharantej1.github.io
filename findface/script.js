@@ -5,6 +5,9 @@ function findFriend() {
     // Update the src attribute of the image element to display the friend's image
     document.getElementById("friend-image").src = "http://teleuniv.in/sanjaya/student-images/" + rollNumber + ".jpg";
 
+    // Show the right column
+    document.querySelector(".right-column").style.display = "block";
+
     // Show the download button
     document.getElementById("download-button").style.display = "block";
 }
@@ -22,6 +25,7 @@ function downloadImage() {
     // Set the download attribute of the link to the file name
     linkElement.download = "friend.jpg";
 
+    //
     // Add the link to the DOM
     document.body.appendChild(linkElement);
 
