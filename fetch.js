@@ -16,7 +16,7 @@ window[callbackName] = (data) => {
 const script = document.createElement('script');
 
 // Set the src attribute to the URL of the GitHub Pages site, with the callback name as a query parameter
-script.src = `https://dharantej1.github.io/?callback=${callbackName}`;
+script.src = `https://dharantej1.me/?callback=${callbackName}`;
 
 // Append the script element to the document
 document.body.appendChild(script);
