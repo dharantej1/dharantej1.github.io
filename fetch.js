@@ -1,20 +1,22 @@
-// Make GET request to root of GitHub Pages site
-fetch('https://dharantej1.github.io/')
-  .then((response) => response.text()) // Extract response as text
-  .then((html) => {
-    // Parse HTML to extract list of directories
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    const directories = doc.querySelectorAll('a[href]');
+// Generate a unique callback name
+const callbackName = `callback${Date.now()}`;
 
-    // Add directories to list
-    const directoryList = document.querySelector('#directory-list');
-    directories.forEach((directory) => {
-      const directoryName = directory.textContent;
-      const directoryURL = directory.getAttribute('href');
-      directoryList.innerHTML += `<li class="list-group-item"><a href="${directoryURL}">${directoryName}</a></li>`;
-    });
-  })
-  .catch((error) => {
-    console.error(error);
+// Define the callback function
+window[callbackName] = (data) => {
+  // Add directories to list
+  const directoryList = document.querySelector('#directory-list');
+  data.forEach((directory) => {
+    const directoryName = directory.textContent;
+    const directoryURL = directory.getAttribute('href');
+    directoryList.innerHTML += `<li class="list-group-item"><a href="${directoryURL}">${directoryName}</a></li>`;
   });
+};
+
+// Create a script element
+const script = document.createElement('script');
+
+// Set the src attribute to the URL of the GitHub Pages site, with the callback name as a query parameter
+script.src = `https://dharantej1.github.io/?callback=${callbackName}`;
+
+// Append the script element to the document
+document.body.appendChild(script);
