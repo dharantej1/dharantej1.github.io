@@ -16,6 +16,9 @@ $(document).ready(function () {
 
     $('body').append(modal);
     $('#imageModal').modal();
+    $('#imageModal').on('hidden.bs.modal', function () {
+      $('#imageModal').remove();
+    });
   });
 });
 
