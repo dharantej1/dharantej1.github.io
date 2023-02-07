@@ -7,7 +7,7 @@ $(document).ready(function () {
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-body">
-              <img src="${image}" alt="Modal Image">
+              <img src="${image}" alt="${imageId} Feed Unavailable">
             </div>
           </div>
         </div>
