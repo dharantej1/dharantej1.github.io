@@ -1,6 +1,7 @@
 $(document).ready(function () {
   $('.card-3d').click(function () {
-    var image = $(this).find('img').attr('src');
+    var imageId = $(this).find('img').attr('id');
+    var image = $(`img[id="${imageId}"]`).attr('src');
     var modal = `
       <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -17,3 +18,4 @@ $(document).ready(function () {
     $('#imageModal').modal();
   });
 });
+
