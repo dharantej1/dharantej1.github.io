@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  $('.card-3d').click(function() {
+$(document).ready(function () {
+  $('.card-3d').click(function () {
     var image = $(this).find('img').attr('src');
     var modal = `
       <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
