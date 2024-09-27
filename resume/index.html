@@ -1,52 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <title>Pusthakala Dharan Tej - Resume</title>
+    <meta name="description" content="Portfolio of Pusthakala Dharan Tej - Software Engineer, AI Enthusiast, and Data Engineer.">
+    <meta name="keywords" content="Dharan Tej, Software Engineer, Data Engineer, AI, Machine Learning, Portfolio">
+    <meta name="author" content="Pusthakala Dharan Tej">
+    <title>Pusthakala Dharan Tej | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<style>
-    body,
-    h1 {
-        font-family: "Raleway", sans-serif
-    }
-
-    body,
-    html {
-        height: 100%
-    }
-
-    .bgimg {
-        background-image: url("./bgimg.jpg");
-        min-height: 100%;
-        min-width: 100%;
-        background-position: center;
-        background-size: cover;
-    }
-</style>
-
 <body>
-
-    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-        <div
-            class="w3-container w3-padding-large w3-jumbo w3-animate-opacity w3-animate-top w3-center w3-text-black w3-hover-text-light-green">
-            Resume
+    <!-- Header Section -->
+    <header id="header">
+        <div class="container">
+            <h1 class="logo">Pusthakala Dharan Tej</h1>
+            <p class="subtitle">Software Engineer | Data Engineer | AI Enthusiast</p>
+            <a href="#about" class="btn-primary">Know More</a>
         </div>
-        <div align="center">
-            <embed src="./Resume_Dharan_Tej_Offline_Pages_Version.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="55%"
-                height="580px" />
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Menu Toggle Button for Small Screens -->
+            <div class="nav-menu-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#extracurricular">Extracurricular</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
-    <div class="w3-display-bottomright w3-padding-large" style="color:black; font-weight: bold;">
-        <a href="https://www.github.com/dharantej1" target="_blank"></a>
-        <a href="./Resume_Dharan_Tej_Offline_Pages_Version.pdf">Download Resume</a>
-    </div>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p>I'm a passionate software engineer with expertise in data engineering and AI. I have a Bachelor's in Computer Science and have worked on multiple projects involving automation, cloud computing, and machine learning.</p>
+        </div>
+    </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Associate Software Engineer - Global Data Engineering</h3>
+                    <span>TEKsystems | Dec 2023 - Present</span>
+                    <p>Working on data engineering projects and contributing to insights using machine learning models on GCP.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Software Engineer Intern</h3>
+                    <span>DRDO | May 2023 - Dec 2023</span>
+                    <p>Worked on Avionics Test-bed Automation, LDRA Analysis, and hands-on experience with embedded boards.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Data Engineering – Data Insights Intern</h3>
+                    <span>TEKsystems | Feb 2023 - May 2023</span>
+                    <p>Trained and optimized machine learning models on GCP for the Natality Dataset. Set up VPC networks for secure data handling and utilized BigQuery for data insights and ML models.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>OBC In-Loop Test-bed Automation (OLTA)</h3>
+                    <p>Led On-Board Computer (OBC) loop Test-bed automation, designing and implementing advanced test automation systems using Python. Ensured optimal performance and reliability in simulated operational environments.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Low Light Image Enhancement</h3>
+                    <p>Developed a Convolutional Neural Network system for enhancing low-light images, improving object detection and scene understanding, while preserving original image content.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Water Quality Analysis using ANN</h3>
+                    <p>Built a Flask application to accurately predict the potability of a given sample of water with 98% accuracy using Artificial Neural Networks (ANN).</p>
+                </div>
+                <div class="project-card">
+                    <h3>Crop Type Prediction using Machine Learning</h3>
+                    <p>Designed a system to provide recommendations on the best crops to cultivate based on soil type, temperature, humidity, and rainfall data using machine learning techniques.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Pi-NAS: Raspberry-Pi based Network Attached Storage</h3>
+                    <p>Developed a network-attached storage system using Raspberry Pi and Open Media Vault (OMV), enabling wireless file transfers across a home network.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Python</div>
+                <div class="skill-item">C</div>
+                <div class="skill-item">C++</div>
+                <div class="skill-item">Java</div>
+                <div class="skill-item">Machine Learning</div>
+                <div class="skill-item">Data Engineering</div>
+                <div class="skill-item">Cloud Computing (GCP, AWS)</div>
+                <div class="skill-item">Embedded Systems</div>
+                <div class="skill-item">BigQuery</div>
+                <div class="skill-item">Data Analysis</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certification-grid">
+                <div class="certification-item">
+                    <h3>AWS Certified Developer Associate - DVA C02</h3>
+                    <p>Amazon Web Services (AWS)</p>
+                </div>
+                <div class="certification-item">
+                    <h3>The Joy of Computing using Python</h3>
+                    <p>NPTEL</p>
+                </div>
+                <div class="certification-item">
+                    <h3>Deep Learning</h3>
+                    <p>NPTEL</p>
+                </div>
+                <div class="certification-item">
+                    <h3>Data Science for Engineers</h3>
+                    <p>NPTEL</p>
+                </div>
+                <div class="certification-item">
+                    <h3>Social Networks</h3>
+                    <p>NPTEL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extracurricular Activities Section -->
+    <section id="extracurricular" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Extracurricular Activities</h2>
+            <div class="extracurricular-grid">
+                <div class="extracurricular-item">
+                    <h3>Content Creator</h3>
+                    <p>YouTube Channel: Delta Edusmith (1.43K Subscribers)</p>
+                </div>
+                <div class="extracurricular-item">
+                    <h3>Video Editing Head</h3>
+                    <p>KMIT's Drama Club ‘Abhinaya’</p>
+                </div>
+                <div class="extracurricular-item">
+                    <h3>Photography Club Contributor</h3>
+                    <p>Traces of Lenses Photography Club</p>
+                </div>
+                <div class="extracurricular-item">
+                    <h3>Blog Content Writer</h3>
+                    <p>Blogger.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p>Email: <a href="mailto:pusthakala.dharan@gmail.com">pusthakala.dharan@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/dharantej1/">LinkedIn Profile</a></p>
+            <p>GitHub: <a href="https://github.com/dharantej1/">GitHub Profile</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <p>© 2024 Pusthakala Dharan Tej. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script src="scripts/main.js"></script>
 </body>
-
 </html>
