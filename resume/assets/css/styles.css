@@ -789,6 +789,29 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.95rem;
 }
 
+.timeline-bullets {
+    margin-top: 15px;
+    padding-left: 18px;
+    list-style-type: disc;
+}
+
+.timeline-bullets li {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.timeline-bullets li:last-child {
+    margin-bottom: 0;
+}
+
+.education-details {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
 /* Projects Section */
 .project-grid {
     display: grid;
@@ -998,7 +1021,27 @@ h1, h2, h3, h4, h5, h6 {
 .contact-text {
     color: var(--text-secondary);
     font-size: 1.05rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.contact-details-meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 25px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.contact-details-meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-details-meta i {
+    color: var(--accent-cyan);
 }
 
 .email-box {
