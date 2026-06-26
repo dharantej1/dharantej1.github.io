@@ -387,6 +387,7 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     padding: 14px 28px;
     border-radius: 12px;
     font-size: 1rem;
@@ -413,16 +414,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition-smooth);
 }
 
-.btn i:first-child:not(:last-child) {
-    margin-left: 0;
-    margin-right: 8px;
-}
-
-.btn i:last-child:not(:first-child) {
-    margin-left: 8px;
-    margin-right: 0;
-}
-
 .btn:active {
     transform: scale(0.97);
 }
@@ -434,15 +425,16 @@ h1, h2, h3, h4, h5, h6 {
         filter: brightness(1.1);
     }
     .btn-secondary:hover {
-        background: rgba(255, 255, 255, 0.08);
-        border-color: rgba(255, 255, 255, 0.2);
+        background: rgba(139, 92, 246, 0.08);
+        border-color: var(--accent-purple);
+        box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.2);
         transform: translateY(-2px);
     }
-    .btn:hover i:last-child:not(:first-child) {
+    .btn:hover .fa-arrow-right {
         transform: translateX(4px);
     }
-    .btn:hover i:first-child:not(:last-child) {
-        transform: translateX(-2px);
+    .btn:hover .fa-download {
+        transform: scale(1.15);
     }
 }
 
