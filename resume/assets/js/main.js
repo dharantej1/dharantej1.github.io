@@ -3,33 +3,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navMenuLinks = document.querySelectorAll('.nav-menu a');
-    const navToggleIcon = navToggle ? navToggle.querySelector('i') : null;
+    const navbar = document.querySelector('.navbar');
+
+    const closeMenu = () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        if (navbar) {
+            navbar.classList.remove('nav-active');
+        }
+    };
 
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', (e) => {
             e.stopPropagation();
             navMenu.classList.toggle('active');
-            
-            // Toggle hamburger icon between bars and times
-            if (navToggleIcon) {
-                if (navToggleIcon.classList.contains('fa-bars')) {
-                    navToggleIcon.classList.remove('fa-bars');
-                    navToggleIcon.classList.add('fa-times');
-                } else {
-                    navToggleIcon.classList.remove('fa-times');
-                    navToggleIcon.classList.add('fa-bars');
-                }
+            navToggle.classList.toggle('active');
+            if (navbar) {
+                navbar.classList.toggle('nav-active');
             }
         });
 
-        // Close menu when clicking outside of it
+        // Close menu when tapping outside of it
         document.addEventListener('click', (e) => {
             if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
-                if (navToggleIcon) {
-                    navToggleIcon.classList.remove('fa-times');
-                    navToggleIcon.classList.add('fa-bars');
-                }
+                closeMenu();
             }
         });
     }
@@ -46,11 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (targetElement) {
                     // Close mobile nav menu
                     if (navMenu && navMenu.classList.contains('active')) {
-                        navMenu.classList.remove('active');
-                        if (navToggleIcon) {
-                            navToggleIcon.classList.remove('fa-times');
-                            navToggleIcon.classList.add('fa-bars');
-                        }
+                        closeMenu();
                     }
 
                     // Calculate header height offset if necessary
@@ -68,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 3. Shrink Navbar on Scroll
-    const navbar = document.querySelector('.navbar');
     const handleScrollNavbar = () => {
         if (navbar) {
             if (window.scrollY > 50) {

@@ -17,16 +17,14 @@
 </head>
 <body>
 
-    <!-- Reusable Ambient Background Glow Blobs -->
-    <div class="bg-blob blob-purple"></div>
-    <div class="bg-blob blob-cyan"></div>
-
     <!-- Navigation Header -->
     <nav class="navbar">
         <div class="container">
             <a href="#header" class="logo">PDT</a>
             <button class="nav-menu-toggle" id="nav-toggle" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
             </button>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#header">Home</a></li>
@@ -41,6 +39,13 @@
         </div>
     </nav>
 
+    <!-- Page Wrapper: clips horizontal overflow WITHOUT breaking position:fixed -->
+    <div class="page-wrap">
+
+    <!-- Reusable Ambient Background Glow Blobs -->
+    <div class="bg-blob blob-purple"></div>
+    <div class="bg-blob blob-cyan"></div>
+
     <!-- Hero Showcase Section -->
     <header id="header">
         <div class="container">
@@ -48,7 +53,10 @@
                 <div class="hero-content reveal">
                     <span class="hero-badge"><i class="fas fa-circle-notch fa-spin"></i> Available for Opportunities</span>
                     <h1 class="hero-title">Pusthakala <br><span class="highlight">Dharan Tej</span></h1>
-                    <p class="hero-subtitle">Software Engineer | Data Engineer | AI Enthusiast. Building automated cloud architectures and deploying machine learning systems on Google Cloud Platform.</p>
+                    <p class="hero-subtitle">
+                        <span class="subtitle-roles">Software Engineer&nbsp;&nbsp;·&nbsp;&nbsp;Data Engineer&nbsp;&nbsp;·&nbsp;&nbsp;AI Enthusiast</span><br>
+                        <span class="subtitle-desc">Building automated cloud architectures and deploying machine learning systems on Google Cloud Platform.</span>
+                    </p>
                     <div class="hero-actions">
                         <a href="#contact" class="btn btn-primary">Let's Connect <i class="fas fa-arrow-right"></i></a>
                         <a href="assets/docs/Resume_Dharan_Tej.pdf" download="Resume_Pusthakala_Dharan_Tej.pdf" class="btn btn-secondary"><i class="fas fa-download"></i> Download Resume</a>
@@ -56,6 +64,7 @@
                 </div>
                 <div class="hero-visual reveal">
                     <div class="hero-card-glow"></div>
+                    <!-- Terminal Mockup (Desktop / Tablet) -->
                     <div class="terminal-mockup">
                         <div class="terminal-header">
                             <span class="terminal-dot dot-red"></span>
@@ -67,16 +76,41 @@
                             <p class="terminal-line"><span class="t-comment"># Global Data & Software Engineering</span></p>
                             <p class="terminal-line"><span class="t-keyword">import</span> gcp_cloud, machine_learning</p>
                             <p class="terminal-line"><span class="t-keyword">class</span> <span class="t-class">DharanTej</span>(<span class="t-class">Engineer</span>):</p>
-                            <p class="terminal-line">    <span class="t-keyword">def</span> <span class="t-func">__init__</span>(self):</p>
-                            <p class="terminal-line">        self.role = <span class="t-str">"Data & Software Engineer"</span></p>
-                            <p class="terminal-line">        self.cloud = [<span class="t-str">"GCP"</span>, <span class="t-str">"AWS"</span>]</p>
-                            <p class="terminal-line">        self.stack = [<span class="t-str">"Python"</span>, <span class="t-str">"BigQuery"</span>, <span class="t-str">"ML"</span>]</p>
-                            <p class="terminal-line">        self.status = <span class="t-str">"Active & Deploying"</span></p>
+                            <p class="terminal-line">  <span class="t-keyword">def</span> <span class="t-func">__init__</span>(self):</p>
+                            <p class="terminal-line">    self.role = <span class="t-str">"Software & Data Eng"</span></p>
+                            <p class="terminal-line">    self.cloud = [<span class="t-str">"GCP"</span>, <span class="t-str">"AWS"</span>]</p>
+                            <p class="terminal-line">    self.stack = [<span class="t-str">"Python"</span>, <span class="t-str">"BigQuery"</span>, <span class="t-str">"ML"</span>]</p>
+                            <p class="terminal-line">    self.status = <span class="t-str">"Active & Deploying"</span></p>
                             <p class="terminal-line"></p>
-                            <p class="terminal-line">    <span class="t-keyword">def</span> <span class="t-func">execute</span>(self):</p>
-                            <p class="terminal-line">        pipeline = gcp_cloud.Pipeline()</p>
-                            <p class="terminal-line">        pipeline.run(source=<span class="t-str">"data"</span>, model=<span class="t-str">"ANN"</span>)</p>
-                            <p class="terminal-line">        <span class="t-keyword">return</span> <span class="t-str">"Insights generated."</span></p>
+                            <p class="terminal-line">  <span class="t-keyword">def</span> <span class="t-func">execute</span>(self):</p>
+                            <p class="terminal-line">    pipeline = gcp_cloud.Pipeline()</p>
+                            <p class="terminal-line">    pipeline.run(data, model=<span class="t-str">"ANN"</span>)</p>
+                            <p class="terminal-line">    <span class="t-keyword">return</span> <span class="t-str">"Insights generated."</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Tech Stack Grid (Mobile only) -->
+                    <div class="mobile-tech-card">
+                        <div class="tech-card-header">
+                            <i class="fas fa-cubes"></i> Core Focus Stack
+                        </div>
+                        <div class="mobile-tech-grid">
+                            <div class="mobile-tech-item">
+                                <span class="tech-item-title">LANGUAGES</span>
+                                <span class="tech-item-value">Python, C++, Java, C</span>
+                            </div>
+                            <div class="mobile-tech-item">
+                                <span class="tech-item-title">CLOUD & DATA</span>
+                                <span class="tech-item-value">GCP, AWS, BigQuery</span>
+                            </div>
+                            <div class="mobile-tech-item">
+                                <span class="tech-item-title">AI & MODELS</span>
+                                <span class="tech-item-value">ANN, CNN, ML</span>
+                            </div>
+                            <div class="mobile-tech-item">
+                                <span class="tech-item-title">AUTOMATION</span>
+                                <span class="tech-item-value">LDRA, OBC In-Loop</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -434,5 +468,7 @@
 
     <!-- Javascript Script Import -->
     <script src="assets/js/main.js"></script>
+
+    </div><!-- /.page-wrap -->
 </body>
 </html>
