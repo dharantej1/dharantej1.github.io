@@ -55,6 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         top: offsetPosition,
                         behavior: 'smooth'
                     });
+
+                    // Update browser URL hash without jumping
+                    history.pushState(null, null, targetId);
                 }
             }
         });
